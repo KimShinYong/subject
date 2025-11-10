@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html</title>
+    <style>
+      @font-face {
+        font-family: "SchoolSafetyRoundedSmile";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-R.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-display: swap;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header,
+      nav,
+      main,
+      article,
+      aside,
+      footer {
+        padding: 20px;
+      }
+
+      header {
+        background-color: skyblue;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      body {
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        background-color: rgb(196, 223, 233);
+        padding: 15px 20px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        z-index: 1000;
+        margin-bottom: 30px;
+        border-radius: 10px;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+        color: black;
+      }
+
+      .tb {
+        width: 100%;
+        max-width: 900px;
+        margin: 32px auto;
+        padding: 0 10px;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 0 0 14px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px 10px;
+        white-space: nowrap;
+        transition: font-size 0.2s ease;
+      }
+
+      .section {
+        background: #f5f5f5;
+        font-weight: 700;
+      }
+
+      .label {
+        width: 110px;
+        background: #fafafa;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      @media (max-width: 767px) {
+        .tb {
+          max-width: 100%;
+          padding: 0 5px;
+        }
+
+        th,
+        td {
+          font-size: 11px;
+          padding: 4px 6px;
+        }
+
+        img {
+          width: 70px;
+          height: auto;
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        .tb {
+          max-width: 95%;
+        }
+
+        th,
+        td {
+          font-size: 13px;
+        }
+
+        h1 {
+          font-size: 26px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .tb {
+          max-width: 900px;
+        }
+
+        th,
+        td {
+          font-size: 15px;
+        }
+
+        h1 {
+          font-size: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header style="font-family: SchoolSafetyRoundedSmile">
+      <h1>Website</h1>
+    </header>
+    <nav style="font-family: SchoolSafetyRoundedSmile">
+      <ul>
+        <li><a href="./main.html">홈</a></li>
+        <li><a href="./intro.html">이력서</a></li>
+        <li><a href="./site.html">자주 가는 사이트</a></li>
+        <li><a href="./contact.html">연락처</a></li>
+      </ul>
+    </nav>
+    <div class="tb">
+      <h1>이 력 서</h1>
+      <table>
+        <tr>
+          <td style="width: 160px" rowspan="4">
+            <div><img src="/image/jjangu.png" alt="프로필" /></div>
+          </td>
+          <td class="label">이름</td>
+          <td>---</td>
+          <td class="label">영문</td>
+          <td>---</td>
+          <td class="label">한문</td>
+          <td>---</td>
+        </tr>
+        <tr>
+          <td class="label">주민번호</td>
+          <td>123456-7891234</td>
+          <td class="label">나이</td>
+          <td>만 24세</td>
+          <td class="label">이메일</td>
+          <td>tls@naver.com</td>
+        </tr>
+        <tr>
+          <td class="label">휴대폰</td>
+          <td>010-1111-2222</td>
+          <td class="label">전화번호</td>
+          <td>010-0000-1111</td>
+          <td class="label">주소</td>
+          <td>수원</td>
+        </tr>
+        <tr>
+          <td class="label">비고</td>
+          <td colspan="5"></td>
+        </tr>
+      </table>
+
+      <table style="margin-top: 12px">
+        <tr>
+          <td class="section" colspan="5">학력사항</td>
+        </tr>
+        <tr>
+          <th style="width: 180px">재학기간</th>
+          <th>학교명 및 전공</th>
+          <th style="width: 120px">학점</th>
+          <th style="width: 90px">구분</th>
+          <th style="width: 120px">비고</th>
+        </tr>
+        <tr>
+          <td class="center">20.03</td>
+          <td>대학교 학과</td>
+          <td class="center">4.0 / 4.5</td>
+          <td class="center">졸업</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="center">17.03</td>
+          <td>고등학교</td>
+          <td class="center">-</td>
+          <td class="center">졸업</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <table style="margin-top: 12px">
+        <tr>
+          <td class="section" colspan="4">활동사항</td>
+        </tr>
+        <tr>
+          <th style="width: 180px">기간</th>
+          <th>활동내용</th>
+          <th style="width: 110px">구분</th>
+          <th style="width: 200px">기관 및 장소</th>
+        </tr>
+        <tr>
+          <td class="center">20.09</td>
+          <td>화이팅</td>
+          <td class="center">동아리</td>
+          <td>대학교</td>
+        </tr>
+        <tr>
+          <td class="center">20.09</td>
+          <td>화이팅</td>
+          <td class="center">교내</td>
+          <td>학과</td>
+        </tr>
+      </table>
+
+      <table style="margin-top: 12px">
+        <tr>
+          <td class="section" colspan="2">수상내역</td>
+          <td class="section" colspan="3">자격증</td>
+        </tr>
+        <tr>
+          <th style="width: 140px">기간</th>
+          <th>수상내역명</th>
+          <th style="width: 200px">면허/자격명</th>
+          <th style="width: 140px">취득일자</th>
+          <th style="width: 220px">발급기관</th>
+        </tr>
+        <tr>
+          <td class="center">20.09</td>
+          <td>화이팅</td>
+          <td>화이팅</td>
+          <td class="center">20.09</td>
+          <td>화이팅</td>
+        </tr>
+        <tr>
+          <td class="center">20.09</td>
+          <td>화이팅</td>
+          <td>화이팅</td>
+          <td class="center">20.09</td>
+          <td>화이팅</td>
+        </tr>
+      </table>
+
+      <table style="margin-top: 12px">
+        <tr>
+          <td class="section" colspan="3">경력사항</td>
+        </tr>
+        <tr>
+          <th style="width: 180px">기간</th>
+          <th style="width: 220px">회사명</th>
+          <th>업무내용</th>
+        </tr>
+        <tr>
+          <td class="center">20.09</td>
+          <td>화이팅</td>
+          <td>화이팅</td>
+        </tr>
+        <tr>
+          <td class="center">20.09</td>
+          <td>화이팅</td>
+          <td>화이팅</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

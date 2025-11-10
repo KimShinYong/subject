@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html</title>
+    <style>
+      @font-face {
+        font-family: "SchoolSafetyRoundedSmile";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-R.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-display: swap;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header,
+      nav,
+      main,
+      article,
+      aside,
+      footer {
+        padding: 20px;
+      }
+
+      header {
+        background-color: skyblue;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      body {
+        margin: 0;
+        line-height: 1.6;
+        font-family: SchoolSafetyRoundedSmile;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        background-color: rgb(196, 223, 233);
+        padding: 15px 20px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        z-index: 1000;
+        margin-bottom: 30px;
+        border-radius: 10px;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+        color: black;
+      }
+
+      main {
+        display: grid;
+        background-color: ivory;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      article {
+        background-color: beige;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      article p {
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      article.profile .profile-images {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      article.profile .profile-images img {
+        width: 100%;
+        max-width: 220px;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+
+      footer nav {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .menu {
+        display: inline-block;
+        background: #fefbd8;
+        padding: 20px 20px 30px;
+        border-radius: 8px;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+
+      .menu img {
+        width: 72px;
+        height: 72px;
+        object-fit: contain;
+        display: block;
+      }
+
+      .menu::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      @media (max-width: 767px) {
+        main {
+          display: block;
+        }
+
+        .menu {
+          max-width: 90%;
+        }
+
+        nav ul {
+          gap: 20px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        main {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          gap: 20px;
+        }
+
+        article.profile .profile-images img {
+          max-width: 45%;
+        }
+
+        nav ul {
+          gap: 28px;
+        }
+
+        .menu {
+          max-width: 400px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        main {
+          display: grid;
+          grid-template-columns: 3fr 1fr;
+          gap: 30px;
+        }
+
+        article.profile .profile-images img {
+          max-width: 30%;
+        }
+
+        nav ul {
+          gap: 50px;
+        }
+
+        .menu {
+          max-width: 420px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Website</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="./main.html">홈(Home)</a></li>
+        <li><a href="./intro.html">이력서(Intro)</a></li>
+        <li><a href="./site.html">자주 가는 사이트(Site)</a></li>
+        <li><a href="./contact.html">연락처(Contact)</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="menus">
+        <article class="profile" id="menu1">
+          <h2>프로필</h2>
+          <p class="profile-images">
+            <img src="/image/jjangu.png" alt="프로필" />
+            <img src="/image/jjangu2.png" alt="프로필" />
+            <img src="/image/jjangu3.png" alt="프로필" />
+          </p>
+        </article>
+        <article id="menu2">
+          <h2>인삿말</h2>
+          <p>
+            안녕하세요. 제 작은 WebSite에 들러주셔서 감사합니다. 이곳은 제가
+            배우고 실험하며 정리한 내용을 기록한 공간입니다. 완벽하지 않더라도
+            꾸준히 나아가는 과정을 담아가고자 합니다. 혹시 보완할 점이 보이거나
+            새로운 아이디어가 있다면 언제든 말씀해 주세요. 더 나은 방향으로
+            배우고 발전해 나가겠습니다.
+          </p>
+          <p>
+            방문해 주신 분들께서는 편안한 마음으로 둘러보시고, 이곳에서 잠시나마
+            힘을 얻어 가시길 바랍니다. 천천히 페이지를 둘러보며 즐겁게 머물러
+            주시면 좋겠습니다.
+          </p>
+          <p>
+            이력서 페이지에서는 저의 학력, 경력, 기술 스택, 자격증 등을 확인하실
+            수 있습니다. 지금까지 어떤 길을 걸어왔는지, 어떤 역량을 쌓아가고
+            있는지를 정리해 두었습니다.
+          </p>
+          <p>
+            자주 가는 사이트 목록은 제가 공부하거나 프로젝트를 진행하면서 자주
+            참고하는 유용한 사이트들입니다. 의외로 모르는 분들이 많지만, 한 번
+            방문해 보시면 분명 도움이 되실 겁니다.
+          </p>
+          <p>
+            연락처 페이지에서는 저와 직접 소통할 수 있는 방법들을 정리해
+            두었습니다. 문의나 제안, 또는 가벼운 인사라도 언제든 환영합니다.
+          </p>
+          <p>
+            끝까지 제 WebSite를 둘러봐 주셔서 감사합니다. 앞으로도 배움과
+            성장하며, 앞으로 나아가겠습니다.
+          </p>
+        </article>
+      </section>
+      <aside class="menu">
+        <h3>추천 사이트</h3>
+        <p>
+          <a href="https://solved.ac"
+            ><img src="./image/solved.png" alt="솔브드"
+          /></a>
+          알고리즘 문제해결 학습의 이정표 🚩 Baekjoon Online Judge 문제들의
+          난이도 및 티어 정보를 제공하는 사이트입니다.
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>2025 @tlsCorperation</p>
+      <nav>
+        <a href="#">회사소개</a>
+        <a href="#">연락처</a>
+        <a href="#">개인정보처리방침</a>
+      </nav>
+      <address>서울특별시 강남구 현익빌딩 3층, 4층 전화: 02-1111-5555</address>
+    </footer>
+  </body>
+</html>
